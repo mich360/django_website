@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>body{background-color: antiquewhite;}</style>
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>Hello,Django!</h1>
+<p>welcome</p>
+<h2>djangoプロジェクト始め方 (プロジェクタ名:django_website)</h2>
+コマンド
+<ol>
+    <li> django-admin startproject django_website</li>
+    <li>cd django_website　　　<pre> cd /Users/naomichimasumoto/Desktop/django_website　作成後こちらから    </pre></li>
+    <li>python3 manage.py runserver</li>
+</ol>
+説明<pre>　　　　　
+        pwd : 現在地コマンド　　　　
+        django_website/setting内の　ALLONED_HOSTS = [] エラーは ["*"]とすると直る
+        manage.py : 管理用コマンドファイル　　　　　　　
+        setting とurlsの二つは必須
+        アプリ作りコマンド : python3 manage.py starapp website 
+        websiteに templates フォルダー作り
+    </pre>
+    <h2>アプリ追加の仕方　最低限一つのアプリが必要</h2>
+    <ol>
+        <li>英数字とアンダースコア__でアプリ名決める　例 website</li>
+        <li>python3 manage.py startapp website</li>
+        <li>django_website/settings 内の INSTALLED_APPS = [~　最後に「'website',」と追加登録</li>
+    </ol> 
+    <P>プロジェクトプロジェクトは全体設定以外ほとんど触れない、<br>メインはアプリ、ひとつのプロジェクトプロジェクトに複数のアプリを追加できます。</P>   
+    <p>webページの追加の仕方</p>
+    <h2>websiteアプリ フォルダー内部作業</h2>
+    <ol>
+        <li>templates フォルダにhtml追加する</li>  
+        <li>views.pyに返すビュー追加</li>  
+        <li>urls.pyでビューをURLに繋ぐ　全体設定のurls.pyでアプリに行く設定「include("website.urls")」</li>  
+    </ol>    
+<a href="https://youtu.be/nS41IkL13QE?t=2158">参照動画</a>
+</body>
+</html>
